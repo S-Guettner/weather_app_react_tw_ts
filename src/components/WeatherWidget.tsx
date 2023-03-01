@@ -1,6 +1,6 @@
-import {useState, useEffect} from 'react'
+import {useState, useEffect} from 'react';
 
-const APIKEY:String = "af64e118fd78251cdaee7869b1decfe1"
+const APIKEY:String = "af64e118fd78251cdaee7869b1decfe1";
 
 
 const WeatherWidget = () => {
@@ -10,8 +10,8 @@ const WeatherWidget = () => {
         windSpeed:"",
         weatherCondition:"",
         iconId:""
-    })
-    const [city,setCity] = useState("Berlin")
+    });
+    const [city,setCity] = useState("Berlin");
 
     useEffect(() => {
         fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APIKEY}`)
@@ -22,9 +22,9 @@ const WeatherWidget = () => {
                 windSpeed:(data.wind.speed),
                 weatherCondition:(data.weather[0].description),
                 iconId:(data.weather[0].icon)
-            })
-        })
-    },[city])
+            });
+        });
+    },[city]);
 
     return ( 
         <main className='w-1/3 mx-auto border-2 border-neutral-200 rounded-lg'>
