@@ -9,7 +9,8 @@ const WeatherWidget = () => {
     const [weatherData,setWeatherData] = useState({
         temp:"",
         windSpeed:"",
-        weatherCondition:""
+        weatherCondition:"",
+        iconId:""
     })
     const [city,setCity] = useState("berlin")
 
@@ -20,16 +21,17 @@ const WeatherWidget = () => {
             setWeatherData({
                 temp:(data.main.temp),
                 windSpeed:(data.wind.speed),
-                weatherCondition:(data.weather[0].description)
+                weatherCondition:(data.weather[0].description),
+                iconId:(data.weather[0].icon)
             })
-            console.log(data)
-            console.log(data.weather[0].description)
+            console.log(data.weather[0].icon)
+            /* console.log(data.weather[0].description) */
         })
     },[city])
 
-    console.log(weatherData.windSpeed)
+    /* console.log(weatherData) */
 
-
+http://openweathermap.org/img/wn/10d@2x.png
 
 
     return ( 
@@ -41,9 +43,9 @@ const WeatherWidget = () => {
                 <button className='shadow-lg hover:bg-neutral-300 hover:text-white' onClick={() => setCity("hamburg")}>Hamburg</button>
             </section>
             <section className='m-4'>
-                <div>
+                <div className='flex items-center'>
                     <p>{weatherData.weatherCondition}</p>
-                    <img src="" alt="" />
+                    <img className='w-[50px]' src={`http://openweathermap.org/img/wn/${weatherData.iconId}@2x.png`} alt="" />
                 </div>
                 <p>Current: {((weatherData.temp) - (273.15)).toFixed(0)}  °C</p>
                 <p>Wind Speed: {((weatherData.windSpeed) * (1.6934)).toFixed(2)} km/h</p>
