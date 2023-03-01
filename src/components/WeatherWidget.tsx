@@ -27,7 +27,7 @@ const WeatherWidget = () => {
     },[city])
 
     return ( 
-        <main className='w-1/2 mx-auto border-2 border-neutral-200 rounded-lg'>
+        <main className='w-1/3 mx-auto border-2 border-neutral-200 rounded-lg'>
             <section className='m-4 flex justify-between p-2'>
                 <button className='p-2 rounded-lg shadow-md hover:bg-neutral-300 hover:text-white' onClick={() => setCity("Düsseldorf")}>Düsseldorf</button>
                 <button className='p-2 rounded-lg shadow-md hover:bg-neutral-300 hover:text-white' onClick={() => setCity("Köln")}>Köln</button>
