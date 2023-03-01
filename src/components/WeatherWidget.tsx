@@ -27,12 +27,12 @@ const WeatherWidget = () => {
     },[city])
 
     return ( 
-        <main className='w-1/2 mx-auto border-2'>
+        <main className='w-1/2 mx-auto border-2 border-neutral-100'>
             <section className='m-4 flex justify-between p-2'>
-                <button className='shadow-lg hover:bg-neutral-300 hover:text-white' onClick={() => setCity("düsseldorf")}>Düsseldorf</button>
-                <button className='shadow-lg hover:bg-neutral-300 hover:text-white' onClick={() => setCity("köln")}>Köln</button>
-                <button className='shadow-lg hover:bg-neutral-300 hover:text-white' onClick={() => setCity("berlin")}>Berlin</button>
-                <button className='shadow-lg hover:bg-neutral-300 hover:text-white' onClick={() => setCity("hamburg")}>Hamburg</button>
+                <button className='p-2 shadow-md hover:bg-neutral-300 hover:text-white' onClick={() => setCity("düsseldorf")}>Düsseldorf</button>
+                <button className='p-2 shadow-md hover:bg-neutral-300 hover:text-white' onClick={() => setCity("köln")}>Köln</button>
+                <button className='p-2 shadow-md hover:bg-neutral-300 hover:text-white' onClick={() => setCity("berlin")}>Berlin</button>
+                <button className='p-2 shadow-md hover:bg-neutral-300 hover:text-white' onClick={() => setCity("hamburg")}>Hamburg</button>
             </section>
             <section className='m-4'>
                 <div className='flex justify-center items-center shadow-lg mb-4 p-2'>
@@ -44,6 +44,6 @@ const WeatherWidget = () => {
             </section>
         </main>
      );
-}
+};
  
 export default WeatherWidget;
