@@ -27,20 +27,20 @@ const WeatherWidget = () => {
     },[city])
 
     return ( 
-        <main className='w-1/2 mx-auto border-2 border-neutral-100 rounded-lg'>
+        <main className='w-1/2 mx-auto border-2 border-neutral-200 rounded-lg'>
             <section className='m-4 flex justify-between p-2'>
-                <button className='p-2 shadow-md hover:bg-neutral-300 hover:text-white' onClick={() => setCity("Düsseldorf")}>Düsseldorf</button>
-                <button className='p-2 shadow-md hover:bg-neutral-300 hover:text-white' onClick={() => setCity("Köln")}>Köln</button>
-                <button className='p-2 shadow-md hover:bg-neutral-300 hover:text-white' onClick={() => setCity("Berlin")}>Berlin</button>
-                <button className='p-2 shadow-md hover:bg-neutral-300 hover:text-white' onClick={() => setCity("Hamburg")}>Hamburg</button>
+                <button className='p-2 rounded-lg shadow-md hover:bg-neutral-300 hover:text-white' onClick={() => setCity("Düsseldorf")}>Düsseldorf</button>
+                <button className='p-2 rounded-lg shadow-md hover:bg-neutral-300 hover:text-white' onClick={() => setCity("Köln")}>Köln</button>
+                <button className='p-2 rounded-lg shadow-md hover:bg-neutral-300 hover:text-white' onClick={() => setCity("Berlin")}>Berlin</button>
+                <button className='p-2 rounded-lg shadow-md hover:bg-neutral-300 hover:text-white' onClick={() => setCity("Hamburg")}>Hamburg</button>
             </section>
             <section className='m-4'>
-                <div className='flex justify-center items-center shadow-lg mb-4 p-2'>
-                    <p className='text-lg'>{weatherData.weatherCondition} in {city}</p>
+                <div className='flex justify-center items-center rounded-lg shadow-md mb-4 p-2'>
+                    <p className='text-lg rounded-lg'>{weatherData.weatherCondition} in {city}</p>
                     <img className='w-[70px] p-2' src={`http://openweathermap.org/img/wn/${weatherData.iconId}@2x.png`} alt="" />
                 </div>
-                <p className='shadow-sm mb-4 p-2'>Current temp: {(Number(weatherData.temp) - (273.15)).toFixed(0)}  °C</p>
-                <p className='shadow-sm p-2'>Wind Speed: {(Number(weatherData.windSpeed) * (1.6934)).toFixed(2)} km/h</p>
+                <p className='shadow-md mb-4 p-2 rounded-lg'>Current temp: {(Number(weatherData.temp) - (273.15)).toFixed(0)}  °C</p>
+                <p className='shadow-md p-2 rounded-lg'>Wind Speed: {(Number(weatherData.windSpeed) * (1.6934)).toFixed(2)} km/h</p>
             </section>
         </main>
      );
