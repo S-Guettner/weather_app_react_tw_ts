@@ -39,8 +39,8 @@ const WeatherWidget = () => {
                     <p>{weatherData.weatherCondition}</p>
                     <img className='w-[50px] p-2' src={`http://openweathermap.org/img/wn/${weatherData.iconId}@2x.png`} alt="" />
                 </div>
-                <p className='shadow-sm mb-4 p-2'>Current temp: {((weatherData.temp) - (273.15)).toFixed(0)}  °C</p>
-                <p className='shadow-sm p-2'>Wind Speed: {((weatherData.windSpeed) * (1.6934)).toFixed(2)} km/h</p>
+                <p className='shadow-sm mb-4 p-2'>Current temp: {(Number(weatherData.temp) - (273.15)).toFixed(0)}  °C</p>
+                <p className='shadow-sm p-2'>Wind Speed: {(Number(weatherData.windSpeed) * (1.6934)).toFixed(2)} km/h</p>
             </section>
         </main>
      );
