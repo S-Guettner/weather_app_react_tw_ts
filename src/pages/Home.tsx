@@ -2,7 +2,7 @@ import WeatherWidget from "../components/WeatherWidget";
 
 const Home = () => {
     return ( 
-        <main>
+        <main className="pt-72">
             <WeatherWidget />
         </main>
      );
