@@ -28,19 +28,19 @@ const WeatherWidget = () => {
 
     return ( 
         <main className='w-1/2 mx-auto border-2'>
-            <section className='m-4 flex justify-between border-2 p-2'>
+            <section className='m-4 flex justify-between p-2'>
                 <button className='shadow-lg hover:bg-neutral-300 hover:text-white' onClick={() => setCity("düsseldorf")}>Düsseldorf</button>
                 <button className='shadow-lg hover:bg-neutral-300 hover:text-white' onClick={() => setCity("köln")}>Köln</button>
                 <button className='shadow-lg hover:bg-neutral-300 hover:text-white' onClick={() => setCity("berlin")}>Berlin</button>
                 <button className='shadow-lg hover:bg-neutral-300 hover:text-white' onClick={() => setCity("hamburg")}>Hamburg</button>
             </section>
             <section className='m-4'>
-                <div className='flex items-center shadow-lg mb-4'>
+                <div className='flex items-center shadow-lg mb-4 p-2'>
                     <p>{weatherData.weatherCondition}</p>
-                    <img className='w-[50px]' src={`http://openweathermap.org/img/wn/${weatherData.iconId}@2x.png`} alt="" />
+                    <img className='w-[50px] p-2' src={`http://openweathermap.org/img/wn/${weatherData.iconId}@2x.png`} alt="" />
                 </div>
-                <p className='shadow-sm mb-4'>Current temp: {((weatherData.temp) - (273.15)).toFixed(0)}  °C</p>
-                <p className='shadow-sm'>Wind Speed: {((weatherData.windSpeed) * (1.6934)).toFixed(2)} km/h</p>
+                <p className='shadow-sm mb-4 p-2'>Current temp: {((weatherData.temp) - (273.15)).toFixed(0)}  °C</p>
+                <p className='shadow-sm p-2'>Wind Speed: {((weatherData.windSpeed) * (1.6934)).toFixed(2)} km/h</p>
             </section>
         </main>
      );
